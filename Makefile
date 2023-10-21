@@ -14,6 +14,3 @@ connect_main:
 
 connect_main_root:
 	docker-compose exec -u root cv_reader bash
-
-#connect_db:
-	#docker-compose exec postgres psql --username=sparktech --dbname=cv_reader_db
