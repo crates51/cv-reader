@@ -1,0 +1,8 @@
+[flake8]
+max-line-length = 100
+ignore = E128, E131, E201, E202, E251, W503, W504
+exclude =
+  __pycache__,
+  .git,
+  config/*
+per-file-ignores = __init__.py:F401

@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  cv_reader:
+    container_name: cv_reader
+    restart: always
+    build:
+      context: .
+      dockerfile: config/dev/Dockerfile-dev
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 5002:5002
+    env_file:
+      - config/dev/.env.dev
+
+volumes:
+  postgres_data:

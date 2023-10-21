@@ -1,0 +1,72 @@
+{
+  "personal": {
+      "name": "Musteata Vladislav",
+      "phone": "+40720103279",
+      "email": "musteatavlad93@gmail.com",
+      "linkedin": "linkedin.com/in/vlad-musteata",
+      "github": "github.com/crates51"
+  },
+  "education": [
+    {
+      "location": "Constanta, Romania",
+      "institution": "Ovidius University",
+      "degree": "Bachelors degree in Computer Science",
+      "dates": "September 2019"
+    },
+    {
+      "location": "Vila-Real, Portugal",
+      "institution": "University of Trs-os-Montes and Alto Douro",
+      "degree": "Erasmus Exchange Student in Informatics Engineering",
+      "dates": "February, 2018 (1 semester)"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Sparktech Software",
+      "location": "Bucharest, Romania",
+      "dates": "Jun 2021 - Present",
+      "description": [
+        "Proficient in managing data across different cloud platforms, including AWS S3, GCS, and ABS.",
+        "Experienced with various API types, such as REST, gRPC, and GraphQL, for efficient communication and data retrieval.",
+        "Skilled in using Kubernetes and related utilities such as kubectl to automate workflows and create bash scripts.",
+        "Utilized Python libraries such as Pandas, Dask, and Scikit-learn for machine learning applications.",
+        "Collaborated with colleagues to solve complex issues using pair programming technique.",
+        "Contributed to the development and optimization of a machine learning platform API by refactoring code, implementing performance improvements, and enhancing functionality, resulting in a more efficient and effective overall system."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "NextGen Communications",
+      "location": "Bucharest, Romania",
+      "dates": "Mar 2020 - Jun 2021",
+      "description": [
+        "Designed and implemented multiple REST APIs using Python, Flask, and SQLAlchemy, to efficiently store and retrieve data from databases.",
+        "Streamlined workflow by creating custom bash scripts, resulting in significant time savings and increased productivity.",
+        "Expanded and maintained a Laravel web interface for monitoring thousands of ONT devices.",
+        "Leveraged hybrid properties in SQLAlchemy to improve data processing and increase database performance.",
+        "Collected and stored data from network devices using Python through snmplib and easytelnet; to avoid conflicts between the devices, we integrated a redis worker to execute commands sequentially.",
+        "Utilized Docker extensively to improve software delivery cycles, achieving faster and more reliable deployments."
+      ]
+    },
+    {
+      "title": "Technical Support",
+      "company": "Jordan European Internet",
+      "location": "Constanta, Romania",
+      "dates": "Oct 2018 - Feb 2020",
+      "description": [
+        "Monitored network operations and documented events that impacted normal functionality, providing regular reports to management on network performance and issues.",
+        "Served as a Dispatch Agent, leading teams of network technicians in the field to quickly resolve network issues and minimize downtime.",
+        "Gained extensive experience in remote work with various network devices, including line enclosures, splitter enclosures, OLTs, and ONTs, among others."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Python, JavaScript, PHP, Bash, SQL (MySQL, PostgreSQL)",
+    "frameworks": "Flask, Laravel",
+    "libraries": "SQLAlchemy, Flask-RESTPlus, snmplib, easytelnet, Pandas, Dask, Sklearn, Marshmallow",
+    "development_tools": "Nvim, Tmux, i3",
+    "clouds": "S3, GCS",
+    "others": "Docker, Redis"
+  }
+}

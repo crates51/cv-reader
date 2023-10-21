@@ -1,0 +1,11 @@
+Flask==2.0.3
+Flask-SQLAlchemy==2.5.1
+Flask-Migrate==3.0.1
+flasgger==0.9.5
+gevent==21.12.0
+gunicorn==20.1.0
+psycopg2-binary==2.8.6
+Werkzeug==2.1.2
+marshmallow==3.18.0
+marshmallow-jsonapi==0.24.0
+pytz==2023.3.post1

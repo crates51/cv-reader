@@ -1,0 +1,14 @@
+FROM python:3.9
+
+
+WORKDIR /usr/src/app
+
+RUN python -m pip install --upgrade pip
+
+COPY . /usr/src/app/
+COPY ./config/dev/requirements-dev.txt /usr/src/app/requirements-dev.txt
+
+RUN pip install -r requirements.txt
+RUN pip install -r requirements-dev.txt
+
+ENTRYPOINT ["./config/dev/entrypoint-dev.sh"]

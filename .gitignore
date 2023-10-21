@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pyenv
+.python-version
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Unit test
+.pytest_cache/
+.coverage
+.coverage.*
+
+# Editors
+.vscode/
+.idea/
+
+pylsp-mypy.cfg
+.dmypy.json
+pylint_rc.rc
+cv_reader/crud/credentials.json
+cv_reader/crud/token.pickle

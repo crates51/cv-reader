@@ -1,0 +1,36 @@
+FROM registry.access.redhat.com/ubi9/python-39
+
+# install requirements
+
+USER 0
+RUN yum update -y --allowerasing
+RUN yum install -y nc
+WORKDIR /usr/src/app
+RUN chown 1001:0 /usr/src/app
+
+
+# Set the locale environment variables
+ENV LANG en_US.utf8
+ENV LC_ALL ro_RO.UTF-8
+
+# Install necessary packages for generating locales
+RUN yum -y update && yum -y install glibc-langpack-en glibc-locale-source
+
+# Generate the Romanian locale
+RUN localedef -i ro_RO -f UTF-8 ro_RO.UTF-8
+
+USER 1001
+# install dependencies
+RUN python -m pip install --upgrade pip
+COPY --chown=1001:0 . /usr/src/app/
+COPY --chown=1001:0 ./config/dev/requirements-dev.txt /usr/src/app/requirements-dev.txt
+RUN pip install -r requirements.txt
+RUN pip install -r requirements-dev.txt
+
+
+#ENV LANG ro_RO.UTF-8
+#ENV LANGUAGE ro_RO:ro  
+#ENV LC_ALL ro_RO.UTF-8
+
+# run entrypoint
+ENTRYPOINT ["./config/dev/entrypoint-dev.sh"]
