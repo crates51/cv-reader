@@ -1,6 +1,0 @@
-Server status check
-Check if the cj-backend is up and running
----
-responses:
-  200:
-    description: Server is up and running

@@ -9,7 +9,7 @@ class SectionConverter(BaseConverter):
         if section not in available_sections:
             raise exceptions.InvalidSectionException(
                 f"The section you provided '{section}' is invalid, " +
-                f"please choose one of: {available_sections}"
+                f'please choose one of: {available_sections}'
             )
         return section
 

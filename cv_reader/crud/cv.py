@@ -7,6 +7,6 @@ PROJECT_PATH = Path(__file__).parent.parent.parent.resolve()
 
 
 def get() -> dict:
-    with open(f"{PROJECT_PATH}/seeds/cv.json", 'r') as j:
+    with open(f'{PROJECT_PATH}/seeds/cv.json', 'r') as j:
         data = json.loads(j.read())
     return data
