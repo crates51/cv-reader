@@ -30,7 +30,7 @@ def validate_section(ctx, param, section):
 @click.option('--section', prompt='Your section', callback=validate_section,
               help= "One of: ['personal', 'experience'. 'education', 'skills']")
 def section(section):
-    print(fetch(section))
+    print(fetch(section)[0])
 
 
 if __name__ == '__main__':

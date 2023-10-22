@@ -4,7 +4,7 @@ from typing import Any
 
 from werkzeug.exceptions import HTTPException
 
-from flasgger import LazyJSONEncoder, LazyString, Swagger
+from flasgger import LazyJSONEncoder, LazyString
 from flask import Flask, request, g
 from cv_reader.utils import logging
 from cv_reader.utils.rest import json_api_errors
@@ -26,17 +26,6 @@ def create_app(config_object: Any) -> Flask:
     app.url_map.strict_slashes = False
 
     app.json_encoder = LazyJSONEncoder
-    # init swagger
-    Swagger(app, template = {
-        'host': LazyString(lambda: request.host),
-        **(
-            {
-                'swaggerUiPrefix': LazyString(
-                    lambda: request.environ.get('HTTP_X_SCRIPT_NAME', '/cj-backend')
-                )
-            } if env in ('prod', 'production') else {}
-        )
-    })  # Swagger exposed under /apidocs
 
     from cv_reader.routes import cv_blueprint
     from cv_reader.constants import exceptions
